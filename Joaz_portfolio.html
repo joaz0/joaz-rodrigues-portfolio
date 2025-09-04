@@ -9,11 +9,10 @@
 
 </head>
 
-<body>
-
+<body class="light">
   <header>
     <nav>
-      <div class="logo"><img src="Imagens/Logo/Logo_light.png" alt="logo"></div>
+      <div class="logo"><img src="Imagens/Logo/Logo_light.png" alt="logo" id="logo"></div>
       <div class="nav_links">
         <a href="#home">Home</a>
         <a href="#about">About</a>
@@ -22,7 +21,7 @@
         <a href="#contact">Contact</a>
       </div>
       <div class="switch_theme">
-        <input type="checkbox" name="switch" id="switch">
+        <button class="fas fa-sun" id="switch_theme"></button>
       </div>
     </nav>
   </header>
@@ -46,8 +45,10 @@
               <h3>Front-end</h3>
               <ul class="stack-list">
                   <li>React & Vue.js</li>
+                  <li>Angular</li>
                   <li>HTML5 & CSS3</li>
-                  <li>JavaScript ES6+</li>
+                  <li>JavaScript & TypeScript</li>
+                  <li>UI/UX Design</li>
                   <li>Responsive Design</li>
               </ul>
         </div>
@@ -59,7 +60,8 @@
             <ul class="stack-list">
                 <li>Node.js & Express</li>
                 <li>Python & Django</li>
-                <li>Bancos de Dados</li>
+                <li>Java & Spring Boot</li>
+                <li>MySQL & PostgreSQL & MongoDB</li>
                 <li>APIs RESTful</li>
             </ul>
         </div>
@@ -74,11 +76,43 @@
         </div>
       </div>
       <div class="scroll-indicator">
-        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-down" id="chevron-down"></i>
     </div>
     </section>
-    <section >
-     
+    <section class="about" id="about">
+      <div class="about_all">
+        <h1>Quem nos somos</h1>
+        <div class="about_articles">
+          <article class="article_about_joaz" id="article_joaz">
+            <div class="about_content_joaz">
+              <img src="" alt="">
+              <p>
+                breve descrição.... 
+              </p>
+            </div>
+            <div class="about_socials">
+              <a href="#" class="about_social_link"><i class="fab fa-github"></i></a>
+              <a href="#" class="about_social_link"><i class="fab fa-linkedin"></i></a>
+              <a href="#" class="about_social_link"><i class="fab fa-instagram"></i></a>
+            </div>
+          </article>
+
+          <article class="article_about_igor" id="article_igor">
+            <div class="about_content_igor">
+              <img src="" alt="">
+              <p>
+                breve descrição....
+              </p>
+              <div class="about_socials">
+                <a href="#" class="about_social_link"><i class="fab fa-github"></i></a>
+                <a href="#" class="about_social_link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="about_social_link"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
     </section>
   </main>
 
