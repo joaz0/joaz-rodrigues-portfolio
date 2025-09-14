@@ -44,8 +44,8 @@ export class AppComponent implements OnInit {
   title = 'Digital Labs';
 
   constructor(
-    private themeService: ThemeService,
-    @Inject(PLATFORM_ID) private platformId: Object
+    private readonly themeService: ThemeService,
+    @Inject(PLATFORM_ID) private readonly platformId: Object
   ) {}
 
   ngOnInit() {
