@@ -1,0 +1,146 @@
+@import 'src/styles';
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: clamp(20px, 4vw, 32px);
+  margin-top: clamp(40px, 6vh, 60px);
+  
+  @media (min-width: 992px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.tech-card {
+  text-align: center;
+  padding: clamp(32px, 5vw, 48px) clamp(24px, 4vw, 32px);
+  position: relative;
+  overflow: hidden;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.6s ease;
+  }
+  
+  &:hover::after {
+    left: 100%;
+  }
+
+  .tech-icon {
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    color: var(--primary);
+    margin-bottom: clamp(16px, 3vh, 24px);
+    transition: var(--transition);
+    display: block;
+    
+    &.fab {
+      &.fa-angular { color: #dd0031; }
+      &.fa-react { color: #61dafb; }
+      &.fa-node-js { color: #339933; }
+      &.fa-vue { color: #4fc08d; }
+      &.fa-python { color: #3776ab; }
+      &.fa-js-square { color: #f7df1e; }
+      &.fa-swift { color: #fa7343; }
+      &.fa-aws { color: #ff9900; }
+      &.fa-docker { color: #2496ed; }
+    }
+  }
+
+  h3 {
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    font-weight: 600;
+    margin-bottom: clamp(16px, 3vh, 20px);
+    color: var(--text);
+    transition: var(--transition);
+  }
+
+  .tech-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: clamp(8px, 2vw, 12px);
+      padding: clamp(6px, 1vh, 8px) 0;
+      color: var(--text-light);
+      font-size: clamp(0.875rem, 2vw, 1rem);
+      transition: var(--transition);
+
+      i {
+        font-size: clamp(1rem, 2vw, 1.125rem);
+        width: 20px;
+        text-align: center;
+        color: var(--primary);
+
+        &.fab {
+          &.fa-react { color: #61dafb; }
+          &.fa-angular { color: #dd0031; }
+          &.fa-html5 { color: #e34f26; }
+          &.fa-js-square { color: #f7df1e; }
+          &.fa-node-js { color: #339933; }
+          &.fa-python { color: #3776ab; }
+          &.fa-java { color: #ed8b00; }
+          &.fa-swift { color: #fa7343; }
+          &.fa-aws { color: #ff9900; }
+          &.fa-docker { color: #2496ed; }
+        }
+
+        &.fas {
+          &.fa-paint-brush { color: #ff6b6b; }
+          &.fa-mobile-alt { color: #4ecdc4; }
+          &.fa-database { color: #f39c12; }
+          &.fa-exchange-alt { color: #9b59b6; }
+          &.fa-mobile { color: #4ecdc4; }
+          &.fa-store { color: #e74c3c; }
+          &.fa-tachometer-alt { color: #3498db; }
+          &.fa-sync-alt { color: #2ecc71; }
+          &.fa-server { color: #95a5a6; }
+          &.fa-shield-alt { color: #e67e22; }
+          &.fa-expand-arrows-alt { color: #8e44ad; }
+        }
+      }
+
+      &:hover {
+        color: var(--text);
+        transform: translateX(4px);
+      }
+    }
+  }
+  
+  &:hover {
+    .tech-icon {
+      transform: scale(1.1) rotateY(360deg);
+    }
+    
+    h3 {
+      color: var(--primary);
+    }
+  }
+}
+
+:host-context(.dark) .tech-card {
+  h3 {
+    color: #f8f9fa;
+  }
+
+  .tech-list li {
+    color: #cccccc;
+
+    &:hover {
+      color: #f8f9fa;
+    }
+  }
+  
+  &:hover h3 {
+    color: var(--secondary);
+  }
+}

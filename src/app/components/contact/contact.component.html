@@ -1,0 +1,229 @@
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title" scrollAnimate="fadeInUp">Vamos Transformar Sua Ideia em Realidade</h2>
+    <p class="section-subtitle" scrollAnimate="fadeInUp">Entre em contato conosco e receba uma consulta gratuita para seu projeto</p>
+    
+    <div class="contact-hero" scrollAnimate="fadeInUp">
+      <div class="contact-benefits">
+        <div class="benefit-item">
+          <i class="fas fa-gift" aria-hidden="true"></i>
+          <h4>Consulta Gratuita</h4>
+          <p>Análise completa do seu projeto sem custo</p>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-clock" aria-hidden="true"></i>
+          <h4>Resposta Rápida</h4>
+          <p>Retornamos em até 24 horas úteis</p>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-handshake" aria-hidden="true"></i>
+          <h4>Orçamento Personalizado</h4>
+          <p>Proposta sob medida para suas necessidades</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="contact-content">
+      <div class="contact-info" scrollAnimate="fadeInLeft">
+        <div class="contact-header">
+          <h3>Fale Conosco</h3>
+          <p>Estamos prontos para ouvir sua ideia e transformá-la em uma solução digital de sucesso.</p>
+        </div>
+        
+        <div class="contact-methods">
+          <article class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Email</h4>
+              <a href="mailto:contato@digitallabs.com" class="contact-link">
+                contato&#64;digitallabs.com
+              </a>
+              <span class="contact-note">Resposta em até 24h</span>
+            </div>
+          </article>
+          
+          <article class="contact-item">
+            <div class="contact-icon">
+              <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            </div>
+            <div class="contact-details">
+              <h4>WhatsApp</h4>
+              <a href="https://wa.me/5535992669710" class="contact-link">
+                (35) 992669710
+              </a>
+              <span class="contact-note">Atendimento imediato</span>
+            </div>
+          </article>
+          
+          <article class="contact-item">
+            <div class="contact-icon">
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Instagram</h4>
+              <a href="https://www.instagram.com/L.digitallabs/" class="contact-link">
+                &#64;L.digitallabs
+              </a>
+              <span class="contact-note">Acompanhe nossos projetos</span>
+            </div>
+          </article>
+          
+          <article class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+            </div>
+            <div class="contact-details">
+              <h4>Localização</h4>
+              <span class="contact-text">Pouso Alegre, MG</span>
+              <span class="contact-note">Atendimento remoto em todo Brasil</span>
+            </div>
+          </article>
+        </div>
+        
+        <div class="contact-social">
+          <h4>Nos siga nas redes sociais</h4>
+          <div class="social-links">
+            <a href="https://github.com/joaz0" class="social-link" aria-label="GitHub Joaz">
+              <i class="fab fa-github" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/joaz-rodrigues/" class="social-link" aria-label="LinkedIn Joaz">
+              <i class="fab fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="https://github.com/Ig0r-or" class="social-link" aria-label="GitHub Igor">
+              <i class="fab fa-github" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/igor-gabriel-silva-prado/" class="social-link" aria-label="LinkedIn Igor">
+              <i class="fab fa-linkedin" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contact-form card" scrollAnimate="fadeInRight">
+        <div class="form-header">
+          <h3>Solicite seu Orçamento</h3>
+          <p>Preencha o formulário e receba uma proposta personalizada</p>
+        </div>
+        
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nome Completo *</label>
+              <input 
+                type="text" 
+                id="name"
+                formControlName="name"
+                placeholder="Seu nome completo" 
+                [attr.aria-invalid]="contactForm.get('name')?.invalid && contactForm.get('name')?.touched"
+                required>
+              <div class="error-message" *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+                Nome é obrigatório
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input 
+                type="email" 
+                id="email"
+                formControlName="email"
+                placeholder="seu@email.com" 
+                [attr.aria-invalid]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched"
+                required>
+              <div class="error-message" *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+                Email válido é obrigatório
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Telefone/WhatsApp</label>
+              <input 
+                type="tel" 
+                id="phone"
+                formControlName="phone"
+                placeholder="(11) 99999-9999">
+            </div>
+            
+            <div class="form-group">
+              <label for="company">Empresa</label>
+              <input 
+                type="text" 
+                id="company"
+                formControlName="company"
+                placeholder="Nome da sua empresa">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="project-type">Tipo de Projeto *</label>
+            <select id="project-type" formControlName="projectType" required>
+              <option value="">Selecione o tipo de projeto</option>
+              <option value="website">Website Institucional</option>
+              <option value="ecommerce">E-commerce</option>
+              <option value="webapp">Aplicação Web</option>
+              <option value="mobile">App Mobile</option>
+              <option value="system">Sistema Personalizado</option>
+              <option value="other">Outro</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="budget">Orçamento Estimado</label>
+            <select id="budget" formControlName="budget">
+              <option value="">Selecione uma faixa</option>
+              <option value="5k-10k">R$ 5.000 - R$ 10.000</option>
+              <option value="10k-25k">R$ 10.000 - R$ 25.000</option>
+              <option value="25k-50k">R$ 25.000 - R$ 50.000</option>
+              <option value="50k+">Acima de R$ 50.000</option>
+              <option value="discuss">Prefiro discutir</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Descreva seu Projeto *</label>
+            <textarea 
+              id="message"
+              formControlName="message"
+              placeholder="Conte-nos sobre sua ideia, objetivos e requisitos do projeto..." 
+              rows="5" 
+              [attr.aria-invalid]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched"
+              required></textarea>
+            <div class="error-message" *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+              Descrição do projeto é obrigatória (mínimo 10 caracteres)
+            </div>
+          </div>
+          
+          <div class="form-footer">
+            <div class="privacy-note">
+              <i class="fas fa-shield-alt" aria-hidden="true"></i>
+              <span>Seus dados estão seguros conosco. Não compartilhamos informações com terceiros.</span>
+            </div>
+            
+            <button 
+              type="submit" 
+              class="btn btn-primary submit-btn"
+              [disabled]="contactForm.invalid">
+              <i class="fas fa-rocket" aria-hidden="true"></i>
+              Solicitar Orçamento Gratuito
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    
+    <div class="contact-cta" scrollAnimate="fadeInUp">
+      <div class="cta-content">
+        <h3>Preferência por ligação?</h3>
+        <p>Agende uma conversa rápida de 15 minutos para discutirmos seu projeto</p>
+        <button class="btn btn-secondary">
+          <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+          Agendar Ligação
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
