@@ -179,6 +179,36 @@
       line-height: 1.6;
     }
 
+    .cta-benefits {
+      display: flex;
+      justify-content: center;
+      gap: clamp(20px, 4vw, 32px);
+      margin-bottom: clamp(24px, 4vh, 32px);
+      flex-wrap: wrap;
+      
+      .benefit {
+        display: flex;
+        align-items: center;
+        gap: clamp(8px, 2vw, 12px);
+        padding: clamp(8px, 2vw, 12px) clamp(16px, 3vw, 20px);
+        background: rgba(105, 89, 248, 0.1);
+        border-radius: calc(var(--border-radius) / 2);
+        border: 1px solid rgba(105, 89, 248, 0.2);
+        
+        i {
+          color: var(--primary);
+          font-size: clamp(1rem, 2vw, 1.125rem);
+        }
+        
+        span {
+          color: var(--text);
+          font-size: clamp(0.875rem, 2vw, 0.9375rem);
+          font-weight: 500;
+          white-space: nowrap;
+        }
+      }
+    }
+    
     .cta-btn {
       font-size: clamp(1rem, 2vw, 1.125rem);
       padding: clamp(16px, 3vw, 20px) clamp(32px, 5vw, 40px);
@@ -224,6 +254,15 @@
 
     p {
       color: #cccccc;
+    }
+    
+    .cta-benefits .benefit {
+      background: rgba(184, 168, 255, 0.1);
+      border-color: rgba(184, 168, 255, 0.2);
+      
+      span {
+        color: #f8f9fa;
+      }
     }
   }
 }

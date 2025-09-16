@@ -48,7 +48,39 @@
         color: var(--text-light);
         line-height: 1.6;
         font-size: clamp(0.875rem, 2vw, 1rem);
-        margin: 0;
+        margin-bottom: clamp(20px, 3vh, 24px);
+      }
+      
+      .process-metrics {
+        display: flex;
+        justify-content: center;
+        gap: clamp(24px, 4vw, 40px);
+        flex-wrap: wrap;
+        
+        .metric {
+          text-align: center;
+          padding: clamp(12px, 2vw, 16px);
+          background: rgba(105, 89, 248, 0.1);
+          border-radius: calc(var(--border-radius) / 2);
+          border: 1px solid rgba(105, 89, 248, 0.2);
+          min-width: clamp(80px, 12vw, 100px);
+          
+          .metric-value {
+            display: block;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1;
+          }
+          
+          .metric-label {
+            font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: clamp(4px, 1vh, 6px);
+          }
+        }
       }
     }
   }
@@ -216,6 +248,12 @@
     }
   }
   
+  .step-action {
+    margin-top: clamp(12px, 2vh, 16px);
+    width: 100%;
+    font-size: clamp(0.875rem, 2vw, 0.9375rem);
+  }
+  
   &:hover {
     .step-header {
       .step-number {
@@ -319,6 +357,19 @@
 
       p {
         color: #cccccc;
+      }
+      
+      .process-metrics .metric {
+        background: rgba(184, 168, 255, 0.1);
+        border-color: rgba(184, 168, 255, 0.2);
+        
+        .metric-value {
+          color: var(--secondary);
+        }
+        
+        .metric-label {
+          color: #cccccc;
+        }
       }
     }
   }

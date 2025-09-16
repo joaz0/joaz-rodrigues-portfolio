@@ -13,19 +13,21 @@
         </div>
         <h3>Desenvolvimento Front-end</h3>
         <p class="service-description">
-          Criação de interfaces de usuário responsivas e atraentes utilizando as mais recentes tecnologias web.
+          Interfaces modernas com React/Angular/Vue.js, design system personalizado, 
+          performance otimizada e experiência do usuário excepcional.
         </p>
         <ul class="service-features">
-          <li><i class="fas fa-check"></i> Design Responsivo</li>
-          <li><i class="fas fa-check"></i> Performance Otimizada</li>
-          <li><i class="fas fa-check"></i> SEO Friendly</li>
-          <li><i class="fas fa-check"></i> Cross-browser</li>
+          <li><i class="fas fa-check"></i> React, Angular, Vue.js</li>
+          <li><i class="fas fa-check"></i> Design System & UI Kit</li>
+          <li><i class="fas fa-check"></i> PWA & Performance 90+</li>
+          <li><i class="fas fa-check"></i> SEO & Accessibility</li>
+          <li><i class="fas fa-check"></i> Responsive & Cross-browser</li>
         </ul>
         <div class="service-price">
           <span class="price-from">A partir de</span>
-          <span class="price-value">R$ 2.500</span>
+          <span class="price-value">R$ 3.500</span>
         </div>
-        <button class="btn btn-primary service-btn">
+        <button class="btn btn-primary service-btn" (click)="requestQuote('frontend')">
           <i class="fas fa-arrow-right"></i>
           Solicitar Orçamento
         </button>
@@ -39,19 +41,21 @@
         </div>
         <h3>Desenvolvimento Back-end</h3>
         <p class="service-description">
-          Construção de APIs robustas e escaláveis, integração com bancos de dados e serviços de terceiros.
+          APIs REST/GraphQL escaláveis, microserviços, integração com bancos de dados, 
+          autenticação JWT/OAuth2 e arquitetura cloud-native.
         </p>
         <ul class="service-features">
-          <li><i class="fas fa-check"></i> APIs RESTful</li>
-          <li><i class="fas fa-check"></i> Banco de Dados</li>
-          <li><i class="fas fa-check"></i> Autenticação Segura</li>
-          <li><i class="fas fa-check"></i> Escalabilidade</li>
+          <li><i class="fas fa-check"></i> Node.js, Python, Java</li>
+          <li><i class="fas fa-check"></i> REST/GraphQL APIs</li>
+          <li><i class="fas fa-check"></i> Microserviços Architecture</li>
+          <li><i class="fas fa-check"></i> JWT/OAuth2 Security</li>
+          <li><i class="fas fa-check"></i> Database Design & Optimization</li>
         </ul>
         <div class="service-price">
           <span class="price-from">A partir de</span>
-          <span class="price-value">R$ 3.500</span>
+          <span class="price-value">R$ 4.500</span>
         </div>
-        <button class="btn btn-secondary service-btn">
+        <button class="btn btn-secondary service-btn" (click)="requestQuote('backend')">
           <i class="fas fa-arrow-right"></i>
           Solicitar Orçamento
         </button>
@@ -65,19 +69,21 @@
         </div>
         <h3>Desenvolvimento Mobile</h3>
         <p class="service-description">
-          Desenvolvimento de aplicativos móveis nativos e híbridos para iOS e Android.
+          Apps nativos iOS/Android e híbridos com React Native/Flutter, 
+          integração com APIs, push notifications e publicação nas stores.
         </p>
         <ul class="service-features">
-          <li><i class="fas fa-check"></i> iOS & Android</li>
-          <li><i class="fas fa-check"></i> React Native</li>
-          <li><i class="fas fa-check"></i> UI/UX Nativo</li>
-          <li><i class="fas fa-check"></i> App Store Deploy</li>
+          <li><i class="fas fa-check"></i> Native iOS/Android</li>
+          <li><i class="fas fa-check"></i> React Native/Flutter</li>
+          <li><i class="fas fa-check"></i> Push Notifications</li>
+          <li><i class="fas fa-check"></i> App Store Optimization</li>
+          <li><i class="fas fa-check"></i> Offline-first Architecture</li>
         </ul>
         <div class="service-price">
           <span class="price-from">A partir de</span>
-          <span class="price-value">R$ 5.000</span>
+          <span class="price-value">R$ 6.500</span>
         </div>
-        <button class="btn btn-secondary service-btn">
+        <button class="btn btn-secondary service-btn" (click)="requestQuote('mobile')">
           <i class="fas fa-arrow-right"></i>
           Solicitar Orçamento
         </button>
@@ -89,22 +95,24 @@
             <i class="fas fa-cloud" aria-hidden="true"></i>
           </div>
         </div>
-        <h3>Serviços em Nuvem</h3>
+        <h3>DevOps & Cloud</h3>
         <p class="service-description">
-          Implementação e gerenciamento de soluções em nuvem para garantir escalabilidade e segurança.
+          Infraestrutura como código, CI/CD pipelines, containerização Docker/Kubernetes, 
+          monitoramento 24/7 e auto-scaling em AWS/Azure/GCP.
         </p>
         <ul class="service-features">
-          <li><i class="fas fa-check"></i> AWS & Azure</li>
-          <li><i class="fas fa-check"></i> DevOps & CI/CD</li>
-          <li><i class="fas fa-check"></i> Monitoramento</li>
-          <li><i class="fas fa-check"></i> Backup & Segurança</li>
+          <li><i class="fas fa-check"></i> AWS/Azure/GCP</li>
+          <li><i class="fas fa-check"></i> Docker/Kubernetes</li>
+          <li><i class="fas fa-check"></i> CI/CD Pipelines</li>
+          <li><i class="fas fa-check"></i> Infrastructure as Code</li>
+          <li><i class="fas fa-check"></i> 24/7 Monitoring & Alerts</li>
         </ul>
         <div class="service-price">
           <span class="price-from">A partir de</span>
-          <span class="price-value">R$ 1.500</span>
+          <span class="price-value">R$ 2.500</span>
           <span class="price-period">/mês</span>
         </div>
-        <button class="btn btn-secondary service-btn">
+        <button class="btn btn-secondary service-btn" (click)="requestQuote('devops')">
           <i class="fas fa-arrow-right"></i>
           Solicitar Orçamento
         </button>
@@ -114,8 +122,23 @@
     <div class="services-cta" scrollAnimate="fadeInUp">
       <div class="cta-content">
         <h3>Precisa de uma solução personalizada?</h3>
-        <p>Oferecemos consultorias gratuitas para entender suas necessidades e criar a solução perfeita para seu negócio.</p>
-        <button class="btn btn-primary cta-btn">
+        <p>Oferecemos consultorias gratuitas de 30 minutos para entender suas necessidades, 
+           analisar viabilidade técnica e criar a estratégia perfeita para seu projeto.</p>
+        <div class="cta-benefits">
+          <div class="benefit">
+            <i class="fas fa-gift"></i>
+            <span>Consulta 100% Gratuita</span>
+          </div>
+          <div class="benefit">
+            <i class="fas fa-clock"></i>
+            <span>Resposta em 24h</span>
+          </div>
+          <div class="benefit">
+            <i class="fas fa-chart-line"></i>
+            <span>Análise de ROI</span>
+          </div>
+        </div>
+        <button class="btn btn-primary cta-btn" (click)="scheduleConsultation()">
           <i class="fas fa-calendar-alt"></i>
           Agendar Consulta Gratuita
         </button>

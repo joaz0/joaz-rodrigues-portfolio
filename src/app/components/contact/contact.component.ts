@@ -59,6 +59,30 @@ Enviado via Digital Labs Website
     `.trim();
   }
 
+  scheduleCall(): void {
+    const message = `
+📞 **Agendamento de Ligação - Digital Labs**
+
+👋 Olá! Gostaria de agendar uma ligação para discutir meu projeto.
+
+📅 **Preferência de horário:**
+• Manhã (9h-12h)
+• Tarde (14h-17h)
+• Noite (19h-21h)
+
+💬 **Assuntos a discutir:**
+• Detalhes do projeto
+• Cronograma e prazos
+• Investimento necessário
+• Próximos passos
+
+📆 Qual seria o melhor dia e horário para vocês?
+    `;
+    
+    const whatsappUrl = `https://wa.me/5535992669710?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  }
+
   private createContactForm(): FormGroup {
     return this.fb.group({
       name: ['', [Validators.required, Validators.minLength(2)]],

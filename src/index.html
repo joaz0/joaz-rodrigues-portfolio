@@ -3,7 +3,19 @@
 <head>
   <meta charset="utf-8">
   <title>Digital Labs - Soluções em Desenvolvimento</title>
-  <base href="/">
+  <base href="/Site_portfolio/">
+  <script>
+    (function(l) {
+      if (l.search[1] === '/' ) {
+        var decoded = l.search.slice(1).split('&').map(function(s) { 
+          return s.replace(/~and~/g, '&')
+        }).join('?');
+        window.history.replaceState(null, null,
+            l.pathname.slice(0, -1) + decoded + l.hash
+        );
+      }
+    }(window.location))
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Digital Labs - Especialistas em desenvolvimento web, mobile e desktop. Criamos soluções digitais inovadoras para sua empresa.">
   <meta name="keywords" content="desenvolvimento web, aplicativos mobile, sistemas desktop, Angular, React, Node.js">
