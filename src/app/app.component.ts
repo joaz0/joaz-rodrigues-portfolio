@@ -37,6 +37,16 @@ import { ThemeService } from './services/theme.service';
       <app-contact></app-contact>
     </main>
     <app-footer></app-footer>
+  
+  <!-- WhatsApp Float Button -->
+  <div class="whatsapp-float">
+    <a href="https://wa.me/5535992669710?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." 
+       target="_blank" 
+       class="whatsapp-btn" 
+       aria-label="Falar no WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
   `,
   styleUrls: ['./app.component.scss']
 })
