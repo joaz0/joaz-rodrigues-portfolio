@@ -1,0 +1,89 @@
+<section id="faq" class="faq-section">
+  <div class="container">
+    <h2 class="section-title" scrollAnimate="fadeInUp">
+      Perguntas <span class="highlight">Frequentes</span>
+    </h2>
+    <p class="section-subtitle" scrollAnimate="fadeInUp">
+      Tire suas dúvidas sobre nossos serviços, processos e tecnologias
+    </p>
+
+    <!-- Search and Filter -->
+    <div class="faq-controls" scrollAnimate="fadeInUp">
+      <div class="search-box">
+        <i class="fas fa-search"></i>
+        <input 
+          type="text" 
+          placeholder="Buscar pergunta..." 
+          [(ngModel)]="searchTerm"
+          class="search-input">
+      </div>
+      
+      <div class="category-filters">
+        <button 
+          *ngFor="let category of categories"
+          class="filter-btn"
+          [class.active]="selectedCategory === category.id"
+          (click)="selectCategory(category.id)">
+          <i [class]="category.icon"></i>
+          {{ category.name }}
+        </button>
+      </div>
+    </div>
+
+    <!-- FAQ Items -->
+    <div class="faq-list" scrollAnimate="fadeInUp">
+      <div class="faq-item" 
+           *ngFor="let faq of filteredFAQs; let i = index"
+           [class.active]="faq.isOpen"
+           [style.animation-delay]="(i * 0.1) + 's'">
+        
+        <div class="faq-question" (click)="toggleFAQ(faq.id)">
+          <h3>{{ faq.question }}</h3>
+          <div class="faq-toggle">
+            <i class="fas fa-plus" [class.fa-minus]="faq.isOpen"></i>
+          </div>
+        </div>
+        
+        <div class="faq-answer" [class.open]="faq.isOpen">
+          <div class="answer-content">
+            <p>{{ faq.answer }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- No Results -->
+    <div class="no-results" *ngIf="filteredFAQs.length === 0" scrollAnimate="fadeInUp">
+      <div class="no-results-content">
+        <i class="fas fa-search"></i>
+        <h3>Nenhuma pergunta encontrada</h3>
+        <p>Tente usar outros termos de busca ou selecione uma categoria diferente.</p>
+        <button class="btn btn-primary" (click)="searchTerm = ''; selectedCategory = 'all'">
+          <i class="fas fa-refresh"></i>
+          Limpar Filtros
+        </button>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="faq-cta" scrollAnimate="fadeInUp">
+      <div class="cta-content">
+        <h3>Não encontrou sua resposta?</h3>
+        <p>
+          Nossa equipe está pronta para esclarecer todas as suas dúvidas. 
+          Entre em contato e receba atendimento personalizado.
+        </p>
+        <div class="cta-buttons">
+          <button class="btn btn-primary" (click)="openWhatsApp()">
+            <i class="fab fa-whatsapp"></i>
+            Falar no WhatsApp
+          </button>
+          <button class="btn btn-secondary" onclick="location.href='#contact'">
+            <i class="fas fa-envelope"></i>
+            Enviar Email
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

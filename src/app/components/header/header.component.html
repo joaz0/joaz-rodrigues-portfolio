@@ -1,0 +1,51 @@
+<header class="header" [class.scrolled]="isScrolled">
+  <nav class="navbar" role="navigation" aria-label="Navegação principal">
+    <div class="logo">
+      <img src="assets/images/Logo_light.png" 
+           alt="Digital Labs - Soluções em Desenvolvimento" 
+           class="logo-img"
+           [src]="themeService.isDarkTheme ? 'assets/images/Logo_dark.png' : 'assets/images/Logo_light.png'"
+           loading="eager">
+    </div>
+    
+    <div class="nav-links" [class.active]="isMenuOpen" role="menubar" id="navigation-menu">
+      <a 
+        *ngFor="let item of navigationItems; trackBy: trackByNavId"
+        (click)="scrollTo(item.id)" 
+        (keydown.enter)="scrollTo(item.id)"
+        (keydown.space)="scrollTo(item.id)"
+        class="nav-link"
+        role="menuitem"
+        tabindex="0"
+        [attr.aria-label]="'Navegar para seção ' + item.label">
+        {{ item.label }}
+      </a>
+    </div>
+    
+    <div class="nav-actions">
+      <button type="button" 
+              class="theme-toggle" 
+              (click)="toggleTheme()" 
+              [attr.aria-label]="themeService.isDarkTheme ? 'Ativar modo claro' : 'Ativar modo escuro'" 
+              [title]="themeService.isDarkTheme ? 'Ativar modo claro' : 'Ativar modo escuro'">
+        <i class="fas" 
+           [class.fa-sun]="themeService.isDarkTheme" 
+           [class.fa-moon]="!themeService.isDarkTheme" 
+           aria-hidden="true"></i>
+      </button>
+      
+      <button type="button" 
+              class="menu-toggle" 
+              (click)="toggleMenu()" 
+              [attr.aria-label]="isMenuOpen ? 'Fechar menu' : 'Abrir menu'"
+              [attr.title]="isMenuOpen ? 'Fechar menu' : 'Abrir menu'"
+              [attr.aria-expanded]="isMenuOpen"
+              aria-controls="navigation-menu">
+        <i class="fas" 
+           [class.fa-bars]="!isMenuOpen" 
+           [class.fa-times]="isMenuOpen"
+           aria-hidden="true"></i>
+      </button>
+    </div>
+  </nav>
+</header>

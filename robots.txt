@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://joaz0.github.io/Site_portfolio/sitemap.xml

@@ -1,0 +1,76 @@
+<section id="guarantees" class="guarantees-section">
+  <div class="container">
+    <h2 class="section-title" scrollAnimate="fadeInUp">
+      Suas <span class="highlight">Garantias</span> Conosco
+    </h2>
+    <p class="section-subtitle" scrollAnimate="fadeInUp">
+      Trabalhamos com total transparência e oferecemos garantias sólidas para sua tranquilidade
+    </p>
+
+    <!-- Guarantees Grid -->
+    <div class="guarantees-grid">
+      <div class="guarantee-card card" 
+           *ngFor="let guarantee of guarantees; let i = index"
+           scrollAnimate="fadeInUp"
+           [style.animation-delay]="(i * 0.1) + 's'">
+        <div class="guarantee-icon">
+          <i [class]="guarantee.icon"></i>
+        </div>
+        <div class="guarantee-content">
+          <div class="guarantee-badge">{{ guarantee.highlight }}</div>
+          <h3>{{ guarantee.title }}</h3>
+          <p>{{ guarantee.description }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="stats-section" scrollAnimate="fadeInUp">
+      <h3>Números que Comprovam Nossa Excelência</h3>
+      <div class="stats-grid">
+        <div class="stat-item" 
+             *ngFor="let stat of stats; let i = index"
+             [style.animation-delay]="(i * 0.1) + 's'">
+          <div class="stat-icon">
+            <i [class]="stat.icon"></i>
+          </div>
+          <div class="stat-number">{{ stat.number }}</div>
+          <div class="stat-label">{{ stat.label }}</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certifications -->
+    <div class="certifications-section" scrollAnimate="fadeInUp">
+      <h3>Certificações e Parcerias</h3>
+      <div class="certifications-grid">
+        <div class="certification-item" 
+             *ngFor="let cert of certifications; let i = index"
+             [style.animation-delay]="(i * 0.1) + 's'">
+          <div class="cert-icon">
+            <i [class]="cert.icon"></i>
+          </div>
+          <div class="cert-content">
+            <h4>{{ cert.name }}</h4>
+            <p>{{ cert.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="guarantees-cta" scrollAnimate="fadeInUp">
+      <div class="cta-content">
+        <h3>Pronto para Começar com Total Segurança?</h3>
+        <p>
+          Todas essas garantias estão incluídas em nossos projetos. 
+          Fale conosco e descubra como podemos ajudar seu negócio a crescer.
+        </p>
+        <button class="btn btn-primary" (click)="openWhatsApp()">
+          <i class="fas fa-shield-alt"></i>
+          Conhecer Todas as Garantias
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,212 @@
+<section id="services">
+  <div class="container">
+    <h2 class="section-title" scrollAnimate="fadeInUp">Nossos Serviços</h2>
+    <p class="section-subtitle" scrollAnimate="fadeInUp">Soluções completas de desenvolvimento para impulsionar seu negócio</p>
+    
+    <div class="services-grid">
+      <article class="service-card card" scrollAnimate="fadeInUp">
+        <div class="service-header">
+          <div class="service-icon">
+            <i class="fas fa-laptop-code" aria-hidden="true"></i>
+          </div>
+          <div class="service-badge">Mais Popular</div>
+        </div>
+        <h3>Desenvolvimento Front-end</h3>
+        <p class="service-description">
+          Interfaces modernas com React/Angular/Vue.js, design system personalizado, 
+          performance otimizada e experiência do usuário excepcional.
+        </p>
+        <ul class="service-features">
+          <li><i class="fas fa-check"></i> React, Angular, Vue.js</li>
+          <li><i class="fas fa-check"></i> Design System & UI Kit</li>
+          <li><i class="fas fa-check"></i> PWA & Performance 90+</li>
+          <li><i class="fas fa-check"></i> SEO & Accessibility</li>
+          <li><i class="fas fa-check"></i> Responsive & Cross-browser</li>
+        </ul>
+        <div class="service-price">
+          <span class="price-from">A partir de</span>
+          <span class="price-value">R$ 3.500</span>
+        </div>
+        <button class="btn btn-primary service-btn" (click)="requestQuote('frontend')">
+          <i class="fas fa-arrow-right"></i>
+          Solicitar Orçamento
+        </button>
+      </article>
+      
+      <article class="service-card card" scrollAnimate="fadeInUp">
+        <div class="service-header">
+          <div class="service-icon">
+            <i class="fas fa-server" aria-hidden="true"></i>
+          </div>
+        </div>
+        <h3>Desenvolvimento Back-end</h3>
+        <p class="service-description">
+          APIs REST/GraphQL escaláveis, microserviços, integração com bancos de dados, 
+          autenticação JWT/OAuth2 e arquitetura cloud-native.
+        </p>
+        <ul class="service-features">
+          <li><i class="fas fa-check"></i> Node.js, Python, Java</li>
+          <li><i class="fas fa-check"></i> REST/GraphQL APIs</li>
+          <li><i class="fas fa-check"></i> Microserviços Architecture</li>
+          <li><i class="fas fa-check"></i> JWT/OAuth2 Security</li>
+          <li><i class="fas fa-check"></i> Database Design & Optimization</li>
+        </ul>
+        <div class="service-price">
+          <span class="price-from">A partir de</span>
+          <span class="price-value">R$ 4.500</span>
+        </div>
+        <button class="btn btn-secondary service-btn" (click)="requestQuote('backend')">
+          <i class="fas fa-arrow-right"></i>
+          Solicitar Orçamento
+        </button>
+      </article>
+      
+      <article class="service-card card" scrollAnimate="fadeInUp">
+        <div class="service-header">
+          <div class="service-icon">
+            <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+          </div>
+        </div>
+        <h3>Desenvolvimento Mobile</h3>
+        <p class="service-description">
+          Apps nativos iOS/Android e híbridos com React Native/Flutter, 
+          integração com APIs, push notifications e publicação nas stores.
+        </p>
+        <ul class="service-features">
+          <li><i class="fas fa-check"></i> Native iOS/Android</li>
+          <li><i class="fas fa-check"></i> React Native/Flutter</li>
+          <li><i class="fas fa-check"></i> Push Notifications</li>
+          <li><i class="fas fa-check"></i> App Store Optimization</li>
+          <li><i class="fas fa-check"></i> Offline-first Architecture</li>
+        </ul>
+        <div class="service-price">
+          <span class="price-from">A partir de</span>
+          <span class="price-value">R$ 6.500</span>
+        </div>
+        <button class="btn btn-secondary service-btn" (click)="requestQuote('mobile')">
+          <i class="fas fa-arrow-right"></i>
+          Solicitar Orçamento
+        </button>
+      </article>
+      
+      <article class="service-card card" scrollAnimate="fadeInUp">
+        <div class="service-header">
+          <div class="service-icon">
+            <i class="fas fa-cloud" aria-hidden="true"></i>
+          </div>
+        </div>
+        <h3>DevOps & Cloud</h3>
+        <p class="service-description">
+          Infraestrutura como código, CI/CD pipelines, containerização Docker/Kubernetes, 
+          monitoramento 24/7 e auto-scaling em AWS/Azure/GCP.
+        </p>
+        <ul class="service-features">
+          <li><i class="fas fa-check"></i> AWS/Azure/GCP</li>
+          <li><i class="fas fa-check"></i> Docker/Kubernetes</li>
+          <li><i class="fas fa-check"></i> CI/CD Pipelines</li>
+          <li><i class="fas fa-check"></i> Infrastructure as Code</li>
+          <li><i class="fas fa-check"></i> 24/7 Monitoring & Alerts</li>
+        </ul>
+        <div class="service-price">
+          <span class="price-from">A partir de</span>
+          <span class="price-value">R$ 2.500</span>
+          <span class="price-period">/mês</span>
+        </div>
+        <button class="btn btn-secondary service-btn" (click)="requestQuote('devops')">
+          <i class="fas fa-arrow-right"></i>
+          Solicitar Orçamento
+        </button>
+      </article>
+    </div>
+    
+    <!-- ROI Calculator Section -->
+    <div class="roi-calculator" scrollAnimate="fadeInUp">
+      <div class="roi-content">
+        <h3>Calcule o ROI do Seu Projeto</h3>
+        <p>Veja quanto seu investimento pode retornar em receita adicional</p>
+        
+        <div class="roi-form">
+          <div class="form-group">
+            <label>Receita mensal atual (R$)</label>
+            <input type="number" [(ngModel)]="currentRevenue" placeholder="Ex: 50000" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Aumento esperado (%)</label>
+            <select [(ngModel)]="expectedIncrease" class="form-control">
+              <option value="20">20% - Conservador</option>
+              <option value="50">50% - Moderado</option>
+              <option value="100">100% - Agressivo</option>
+              <option value="200">200% - Disruptivo</option>
+            </select>
+          </div>
+          <div class="roi-result" *ngIf="currentRevenue > 0">
+            <div class="result-item">
+              <span>ROI em 12 meses:</span>
+              <strong>R$ {{ calculateROI() | number:'1.0-0' }}</strong>
+            </div>
+            <div class="result-item highlight">
+              <span>Retorno do investimento:</span>
+              <strong>{{ calculateROIPercentage() }}x</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="services-cta" scrollAnimate="fadeInUp">
+      <div class="cta-content">
+        <h3>Pronto para Transformar Seu Negócio?</h3>
+        <p>Oferecemos consultorias gratuitas de 30 minutos para entender suas necessidades, 
+           analisar viabilidade técnica e criar a estratégia perfeita para seu projeto.</p>
+        
+        <div class="cta-stats">
+          <div class="stat">
+            <span class="number">300%</span>
+            <span class="label">ROI Médio</span>
+          </div>
+          <div class="stat">
+            <span class="number">30 dias</span>
+            <span class="label">Entrega Média</span>
+          </div>
+          <div class="stat">
+            <span class="number">98%</span>
+            <span class="label">Satisfação</span>
+          </div>
+        </div>
+        
+        <div class="cta-benefits">
+          <div class="benefit">
+            <i class="fas fa-gift"></i>
+            <span>Consulta 100% Gratuita</span>
+          </div>
+          <div class="benefit">
+            <i class="fas fa-clock"></i>
+            <span>Resposta em 24h</span>
+          </div>
+          <div class="benefit">
+            <i class="fas fa-chart-line"></i>
+            <span>Análise de ROI Personalizada</span>
+          </div>
+          <div class="benefit">
+            <i class="fas fa-shield-alt"></i>
+            <span>Garantia de Entrega</span>
+          </div>
+        </div>
+        
+        <div class="cta-buttons">
+          <button class="btn btn-primary cta-btn pulse" (click)="scheduleConsultation()">
+            <i class="fas fa-calendar-alt"></i>
+            Agendar Consulta Gratuita
+          </button>
+          <button class="btn btn-secondary" (click)="openQuoteCalculator()">
+            <i class="fas fa-calculator"></i>
+            Calcular Orçamento
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Quote Calculator -->
+  <app-quote-calculator></app-quote-calculator>
+</section>
