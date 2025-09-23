@@ -127,12 +127,12 @@
         
         <div class="roi-form">
           <div class="form-group">
-            <label>Receita mensal atual (R$)</label>
-            <input type="number" [(ngModel)]="currentRevenue" placeholder="Ex: 50000" class="form-control">
+            <label for="currentRevenue">Receita mensal atual (R$)</label>
+            <input type="number" [(ngModel)]="currentRevenue" placeholder="Ex: 50000" class="form-control" id="currentRevenue">
           </div>
           <div class="form-group">
-            <label>Aumento esperado (%)</label>
-            <select [(ngModel)]="expectedIncrease" class="form-control">
+            <label for="expectedIncrease">Aumento esperado (%)</label>
+            <select [(ngModel)]="expectedIncrease" class="form-control" aria-label="Aumento esperado" id="expectedIncrease">
               <option value="20">20% - Conservador</option>
               <option value="50">50% - Moderado</option>
               <option value="100">100% - Agressivo</option>

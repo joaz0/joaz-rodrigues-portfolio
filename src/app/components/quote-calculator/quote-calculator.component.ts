@@ -212,4 +212,14 @@ export class QuoteCalculatorComponent implements OnInit {
       default: return false;
     }
   }
+
+  getProjectTypeName(): string {
+    const project = this.projectTypes.find(p => p.id === this.projectType);
+    return project ? project.name : '';
+  }
+
+  getComplexityName(): string {
+    const complexity = this.complexityOptions.find(c => c.id === this.complexity);
+    return complexity ? complexity.name : '';
+  }
 }
