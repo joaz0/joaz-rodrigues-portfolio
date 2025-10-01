@@ -1,6 +1,7 @@
 # Dependencies
 node_modules/
 npm-debug.log*
+<<<<<<< HEAD
 
 # Build outputs
 dist/
@@ -13,10 +14,32 @@ out-tsc/
 Thumbs.db
 
 # IDE
+=======
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+dist/
+build/
+out/
+
+# Angular specific
+.angular/
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE files
+>>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc
 .vscode/
 .idea/
 *.swp
 *.swo
+<<<<<<< HEAD
 
 # Angular
 .angular/
@@ -26,3 +49,27 @@ Thumbs.db
 .env
 .env.local
 .env.production
+=======
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+logs
+*.log
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# Temporary folders
+tmp/
+temp/
+>>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc

@@ -154,6 +154,7 @@
   }
 }
 
+<<<<<<< HEAD
 // ROI Calculator
 .roi-calculator {
   margin-top: clamp(60px, 10vh, 80px);
@@ -280,6 +281,10 @@
 
 .services-cta {
   margin-top: clamp(40px, 6vh, 60px);
+=======
+.services-cta {
+  margin-top: clamp(60px, 10vh, 80px);
+>>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc
   text-align: center;
   padding: clamp(40px, 6vh, 60px);
   background: linear-gradient(135deg, rgba(105, 89, 248, 0.05), rgba(184, 168, 255, 0.05));
@@ -333,6 +338,7 @@
       }
     }
     
+<<<<<<< HEAD
     .cta-stats {
       display: flex;
       justify-content: center;
@@ -380,6 +386,11 @@
           max-width: 300px;
         }
       }
+=======
+    .cta-btn {
+      font-size: clamp(1rem, 2vw, 1.125rem);
+      padding: clamp(16px, 3vw, 20px) clamp(32px, 5vw, 40px);
+>>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc
     }
   }
 }
@@ -424,10 +435,13 @@
       color: #cccccc;
     }
     
+<<<<<<< HEAD
     .cta-stats .stat .label {
       color: #cccccc;
     }
     
+=======
+>>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc
     .cta-benefits .benefit {
       background: rgba(184, 168, 255, 0.1);
       border-color: rgba(184, 168, 255, 0.2);
@@ -439,6 +453,7 @@
   }
 }
 
+<<<<<<< HEAD
 // Animations
 @keyframes float {
   0%, 100% { transform: translate(0, 0) rotate(0deg); }
@@ -471,6 +486,8 @@
   }
 }
 
+=======
+>>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc
 @keyframes rotate {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

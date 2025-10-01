@@ -1,7 +1,13 @@
 export const APP_CONFIG = {
+<<<<<<< HEAD
   COMPANY_NAME: 'Joaz Rodrigues',
   TAGLINE: 'Desenvolvedor Full-Stack',
   DESCRIPTION: 'Especialista em desenvolvimento web, mobile e desktop. Criando soluções digitais inovadoras para sua empresa.',
+=======
+  COMPANY_NAME: 'Digital Labs',
+  TAGLINE: 'Soluções em Desenvolvimento',
+  DESCRIPTION: 'Especialistas em desenvolvimento web, mobile e desktop. Criamos soluções digitais inovadoras para sua empresa.',
+>>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc
   HEADER_HEIGHT: 80,
   MOBILE_BREAKPOINT: 768,
   TABLET_BREAKPOINT: 1024

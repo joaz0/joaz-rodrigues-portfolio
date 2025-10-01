@@ -58,7 +58,10 @@ $shadow: var(--shadow);
 $shadow-hover: var(--shadow-hover);
 $transition: var(--transition);
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc
 // Reset global
 *, *::before, *::after {
   margin: 0;
@@ -349,6 +352,7 @@ section {
   }
 }
 
+<<<<<<< HEAD
 @keyframes slideInUp {
   from {
     opacity: 0;
@@ -426,6 +430,8 @@ section {
   }
 }
 
+=======
+>>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc
 @keyframes pulse {
   0%, 100% {
     transform: scale(1);
@@ -435,6 +441,7 @@ section {
   }
 }
 
+<<<<<<< HEAD
 @keyframes heartbeat {
   0%, 14%, 28%, 42%, 70% {
     transform: scale(1);
@@ -444,6 +451,8 @@ section {
   }
 }
 
+=======
+>>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     transform: translateY(0);
@@ -456,6 +465,7 @@ section {
   }
 }
 
+<<<<<<< HEAD
 @keyframes shake {
   0%, 100% {
     transform: translateX(0);
@@ -594,6 +604,9 @@ section {
 }
 
 // Classes de animação básicas
+=======
+// Classes de animação
+>>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc
 .animate-fade-in-up {
   animation: fadeInUp 0.8s ease-out;
 }
@@ -610,6 +623,7 @@ section {
   animation: fadeInRight 0.8s ease-out;
 }
 
+<<<<<<< HEAD
 .animate-slide-in-up {
   animation: slideInUp 0.8s ease-out;
 }
@@ -643,10 +657,13 @@ section {
 }
 
 // Classes de animação contínuas
+=======
+>>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc
 .animate-pulse {
   animation: pulse 2s infinite;
 }
 
+<<<<<<< HEAD
 .animate-heartbeat {
   animation: heartbeat 1.5s infinite;
 }
@@ -762,6 +779,8 @@ section {
   100% { width: 100%; }
 }
 
+=======
+>>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc
 // Utilitários
 .text-center {
   text-align: center;

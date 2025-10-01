@@ -20,12 +20,17 @@
 }
 
 .hero-content {
+<<<<<<< HEAD
   max-width: min(1000px, 90%);
+=======
+  max-width: min(900px, 90%);
+>>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc
   margin: 0 auto;
   position: relative;
   z-index: 1;
 }
 
+<<<<<<< HEAD
 // Trust Badges
 .trust-badges {
   display: flex;
@@ -118,10 +123,13 @@
   }
 }
 
+=======
+>>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc
 .hero-title {
   font-size: clamp(2.5rem, 8vw, 4.5rem);
   font-weight: 700;
   line-height: 1.1;
+<<<<<<< HEAD
   margin-bottom: clamp(20px, 4vh, 30px);
   animation: fadeInUp 1s ease-out;
   
@@ -146,6 +154,17 @@
     @supports not (-webkit-background-clip: text) {
       color: var(--accent);
     }
+=======
+  margin-bottom: clamp(16px, 3vh, 24px);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fadeInUp 1s ease-out;
+  
+  @supports not (-webkit-background-clip: text) {
+    color: var(--primary);
+>>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc
   }
 }
 
@@ -169,6 +188,7 @@
   
   .btn {
     flex: 0 1 auto;
+<<<<<<< HEAD
     position: relative;
     overflow: hidden;
     
@@ -194,6 +214,12 @@
     @include respond-below(sm) {
       flex: 1 1 100%;
       max-width: 300px;
+=======
+    
+    @include respond-below(sm) {
+      flex: 1 1 100%;
+      max-width: 280px;
+>>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc
     }
   }
 }
@@ -210,6 +236,7 @@
   color: #cccccc;
 }
 
+<<<<<<< HEAD
 :host-context(.dark) .trust-badges .badge {
   background: rgba(105, 89, 248, 0.15);
   border-color: rgba(105, 89, 248, 0.3);
@@ -223,6 +250,8 @@
   color: #cccccc;
 }
 
+=======
+>>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc
 @keyframes float {
   0%, 100% { transform: translate(0, 0) rotate(0deg); }
   33% { transform: translate(30px, -30px) rotate(120deg); }

@@ -5,14 +5,31 @@
       "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
+<<<<<<< HEAD
         "distDir": "dist"
+=======
+        "distDir": "dist/digital-labs"
+>>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc
       }
     }
   ],
   "routes": [
     {
+<<<<<<< HEAD
+=======
+      "src": "/(.*\\.(js|css|ico|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot|json|webp))",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
+    },
+    {
+>>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc
       "src": "/(.*)",
       "dest": "/index.html"
     }
   ]
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc

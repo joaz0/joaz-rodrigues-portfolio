@@ -17,8 +17,13 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+<<<<<<< HEAD
             "outputPath": "dist",
             "baseHref": "/Site_portfolio/",
+=======
+            "outputPath": "dist/digital-labs",
+            "baseHref": "/",
+>>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -54,7 +59,43 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
+<<<<<<< HEAD
               "outputHashing": "all"
+=======
+              "outputHashing": "all",
+              "optimization": true,
+              "sourceMap": false,
+              "buildOptimizer": true,
+              "extractLicenses": true
+            },
+            "vercel": {
+              "baseHref": "/",
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "50kb",
+                  "maximumError": "100kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all",
+              "optimization": true,
+              "sourceMap": false,
+              "buildOptimizer": true,
+              "extractLicenses": true,
+              "namedChunks": false,
+              "vendorChunk": false
+>>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc
             },
             "development": {
               "buildOptimizer": false,
@@ -73,11 +114,42 @@
             "production": {
               "buildTarget": "digital-labs:build:production"
             },
+<<<<<<< HEAD
+=======
+            "vercel": {
+              "buildTarget": "digital-labs:build:vercel"
+            },
+>>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc
             "development": {
               "buildTarget": "digital-labs:build:development"
             }
           },
           "defaultConfiguration": "development"
+<<<<<<< HEAD
+=======
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "buildTarget": "digital-labs:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.spec.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.scss"
+            ],
+            "scripts": []
+          }
+>>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc
         }
       }
     }
