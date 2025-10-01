@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "joaz-rodrigues-portfolio",
   "version": "1.0.0",
   "description": "Joaz Rodrigues - Desenvolvedor Full-Stack",
@@ -11,19 +10,6 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint"
-=======
-  "name": "digital-labs",
-  "version": "1.0.0",
-  "description": "Digital Labs - Soluções em Desenvolvimento Web",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build --configuration=production",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "lint": "ng lint",
-    "vercel-build": "ng build --configuration=vercel"
->>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc
   },
   "private": true,
   "dependencies": {
@@ -40,13 +26,8 @@
     "zone.js": "~0.14.0"
   },
   "devDependencies": {
-<<<<<<< HEAD
     "@angular-devkit/build-angular": "^17.3.0",
     "@angular/cli": "^17.3.0",
-=======
-    "@angular-devkit/build-angular": "^17.0.0",
-    "@angular/cli": "^17.0.0",
->>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc
     "@angular/compiler-cli": "^17.0.0",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^18.18.0",
@@ -65,12 +46,6 @@
     "digital-agency",
     "portfolio"
   ],
-<<<<<<< HEAD
   "author": "Joaz Rodrigues",
   "license": "MIT"
 }
-=======
-  "author": "Digital Labs",
-  "license": "MIT"
-}
->>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc
