@@ -1,30 +1,20 @@
 export const APP_CONFIG = {
-<<<<<<< HEAD
-  COMPANY_NAME: 'Joaz Rodrigues',
-  TAGLINE: 'Desenvolvedor Full-Stack',
-  DESCRIPTION: 'Especialista em desenvolvimento web, mobile e desktop. Criando soluções digitais inovadoras para sua empresa.',
-=======
-  COMPANY_NAME: 'Digital Labs',
-  TAGLINE: 'Soluções em Desenvolvimento',
-  DESCRIPTION: 'Especialistas em desenvolvimento web, mobile e desktop. Criamos soluções digitais inovadoras para sua empresa.',
->>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc
-  HEADER_HEIGHT: 80,
-  MOBILE_BREAKPOINT: 768,
-  TABLET_BREAKPOINT: 1024
-} as const;
+  name: 'Joaz Rodrigues Portfolio',
+  version: '1.0.0',
+  author: 'Joaz Rodrigues',
+  description: 'Desenvolvedor Full-Stack especializado em soluções web, mobile e desktop'
+};
 
-export const NAVIGATION_ITEMS = [
-  { id: 'home', label: 'Home', route: '/home' },
-  { id: 'technologies', label: 'Tecnologias', route: '/technologies' },
-  { id: 'about', label: 'Sobre', route: '/about' },
-  { id: 'services', label: 'Serviços', route: '/services' },
-  { id: 'projects', label: 'Projetos', route: '/projects' },
-  { id: 'process', label: 'Processo', route: '/process' },
-  { id: 'contact', label: 'Contato', route: '/contact' }
-] as const;
+export const CONTACT_INFO = {
+  whatsapp: '5535992669710',
+  email: 'joaz.rodrigues@email.com',
+  linkedin: 'https://linkedin.com/in/joaz-rodrigues',
+  github: 'https://github.com/joaz0'
+};
 
-export const ANIMATION_DURATION = {
-  FAST: 200,
-  NORMAL: 300,
-  SLOW: 500
-} as const;
+export const SOCIAL_LINKS = {
+  whatsapp: `https://wa.me/${CONTACT_INFO.whatsapp}`,
+  email: `mailto:${CONTACT_INFO.email}`,
+  linkedin: CONTACT_INFO.linkedin,
+  github: CONTACT_INFO.github
+};

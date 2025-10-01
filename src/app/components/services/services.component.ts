@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Component, ChangeDetectionStrategy, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -6,37 +5,23 @@ import { SERVICES } from '../../shared/constants/data.constants';
 import type { Service } from '../../shared/interfaces';
 import { ScrollAnimateDirective } from '../../directives/scroll-animate.directive';
 import { QuoteCalculatorComponent } from '../quote-calculator/quote-calculator.component';
-=======
-import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { SERVICES } from '../../shared/constants/data.constants';
-import type { Service } from '../../shared/interfaces';
-import { ScrollAnimateDirective } from '../../directives/scroll-animate.directive';
->>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc
 
 @Component({
   selector: 'app-services',
   standalone: true,
-<<<<<<< HEAD
   imports: [CommonModule, FormsModule, ScrollAnimateDirective, QuoteCalculatorComponent],
-=======
-  imports: [CommonModule, ScrollAnimateDirective],
->>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc
   templateUrl: './services.component.html',
   styleUrls: ['./services.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ServicesComponent {
   protected readonly services: readonly Service[] = SERVICES;
-<<<<<<< HEAD
   
   @ViewChild(QuoteCalculatorComponent) quoteCalculator!: QuoteCalculatorComponent;
   
   // ROI Calculator properties
   currentRevenue = 0;
   expectedIncrease = 50;
-=======
->>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc
 
   private readonly serviceDetails = {
     frontend: {
@@ -59,13 +44,6 @@ export class ServicesComponent {
       deliverables: ['App iOS/Android', 'Push Notifications', 'Analytics', 'App Store Submission', 'Documentação'],
       timeline: '8-16 semanas',
       price: 'R$ 6.500 - R$ 35.000'
-    },
-    devops: {
-      name: 'DevOps & Cloud',
-      technologies: ['AWS', 'Docker', 'Kubernetes', 'Terraform', 'Jenkins', 'Prometheus'],
-      deliverables: ['Infraestrutura Cloud', 'CI/CD Pipeline', 'Monitoramento', 'Backup Strategy', 'Documentação'],
-      timeline: 'Setup: 2-4 semanas',
-      price: 'Setup: R$ 5.000 + R$ 2.500/mês'
     }
   };
 
@@ -102,15 +80,9 @@ ${service.deliverables.map(item => `• ${item}`).join('\n')}
     const message = `
 📅 **Agendamento de Consulta Gratuita**
 
-<<<<<<< HEAD
 👋 Olá Joaz! Gostaria de agendar uma consulta gratuita para discutir meu projeto.
 
 💬 Pode me ajudar a entender:
-=======
-👋 Olá! Gostaria de agendar uma consulta gratuita para discutir meu projeto.
-
-💬 Podem me ajudar a entender:
->>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc
 • Qual a melhor solução para minha necessidade
 • Prazo e investimento necessário
 • Processo de desenvolvimento
@@ -122,7 +94,6 @@ ${service.deliverables.map(item => `• ${item}`).join('\n')}
     const whatsappUrl = `https://wa.me/5535992669710?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   }
-<<<<<<< HEAD
   
   openQuoteCalculator(): void {
     this.quoteCalculator.openCalculator();
@@ -141,6 +112,4 @@ ${service.deliverables.map(item => `• ${item}`).join('\n')}
     const multiplier = annualROI / averageProjectCost;
     return multiplier.toFixed(1);
   }
-=======
->>>>>>> 709c3516f05f8d5c31e7c097d66426a2b05650dc
 }
