@@ -58,6 +58,7 @@ $shadow: var(--shadow);
 $shadow-hover: var(--shadow-hover);
 $transition: var(--transition);
 
+
 // Reset global
 *, *::before, *::after {
   margin: 0;
@@ -348,12 +349,98 @@ section {
   }
 }
 
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    opacity: 0;
+    transform: scale(1.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    opacity: 0;
+    transform: rotate(-200deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0);
+  }
+}
+
+@keyframes flipInX {
+  from {
+    opacity: 0;
+    transform: perspective(400px) rotateX(90deg);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(400px) rotateX(0deg);
+  }
+}
+
+@keyframes flipInY {
+  from {
+    opacity: 0;
+    transform: perspective(400px) rotateY(90deg);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(400px) rotateY(0deg);
+  }
+}
+
 @keyframes pulse {
   0%, 100% {
     transform: scale(1);
   }
   50% {
     transform: scale(1.05);
+  }
+}
+
+@keyframes heartbeat {
+  0%, 14%, 28%, 42%, 70% {
+    transform: scale(1);
+  }
+  7%, 21%, 35% {
+    transform: scale(1.1);
   }
 }
 
@@ -369,7 +456,144 @@ section {
   }
 }
 
-// Classes de animação
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes swing {
+  20% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(5deg);
+  }
+  80% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rubberBand {
+  from {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.25, 0.75);
+  }
+  40% {
+    transform: scale(0.75, 1.25);
+  }
+  50% {
+    transform: scale(1.15, 0.85);
+  }
+  65% {
+    transform: scale(0.95, 1.05);
+  }
+  75% {
+    transform: scale(1.05, 0.95);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes wobble {
+  from {
+    transform: translateX(0%);
+  }
+  15% {
+    transform: translateX(-25%) rotate(-5deg);
+  }
+  30% {
+    transform: translateX(20%) rotate(3deg);
+  }
+  45% {
+    transform: translateX(-15%) rotate(-3deg);
+  }
+  60% {
+    transform: translateX(10%) rotate(2deg);
+  }
+  75% {
+    transform: translateX(-5%) rotate(-1deg);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px $primary;
+  }
+  to {
+    box-shadow: 0 0 20px $primary, 0 0 30px $primary;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0%, 50% {
+    border-color: transparent;
+  }
+  51%, 100% {
+    border-color: $primary;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes slideInScale {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+// Classes de animação básicas
 .animate-fade-in-up {
   animation: fadeInUp 0.8s ease-out;
 }
@@ -386,8 +610,156 @@ section {
   animation: fadeInRight 0.8s ease-out;
 }
 
+.animate-slide-in-up {
+  animation: slideInUp 0.8s ease-out;
+}
+
+.animate-slide-in-down {
+  animation: slideInDown 0.8s ease-out;
+}
+
+.animate-zoom-in {
+  animation: zoomIn 0.6s ease-out;
+}
+
+.animate-zoom-out {
+  animation: zoomOut 0.6s ease-out;
+}
+
+.animate-rotate-in {
+  animation: rotateIn 0.8s ease-out;
+}
+
+.animate-flip-in-x {
+  animation: flipInX 0.8s ease-out;
+}
+
+.animate-flip-in-y {
+  animation: flipInY 0.8s ease-out;
+}
+
+.animate-slide-in-scale {
+  animation: slideInScale 0.8s ease-out;
+}
+
+// Classes de animação contínuas
 .animate-pulse {
   animation: pulse 2s infinite;
+}
+
+.animate-heartbeat {
+  animation: heartbeat 1.5s infinite;
+}
+
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.animate-gradient {
+  background: linear-gradient(-45deg, $primary, $secondary, $accent, $primary);
+  background-size: 400% 400%;
+  animation: gradient 4s ease infinite;
+}
+
+// Classes de animação de interação
+.animate-shake:hover {
+  animation: shake 0.5s;
+}
+
+.animate-swing:hover {
+  animation: swing 1s;
+}
+
+.animate-rubber-band:hover {
+  animation: rubberBand 1s;
+}
+
+.animate-wobble:hover {
+  animation: wobble 1s;
+}
+
+// Delays para animações em sequência
+.animate-delay-1 { animation-delay: 0.1s; }
+.animate-delay-2 { animation-delay: 0.2s; }
+.animate-delay-3 { animation-delay: 0.3s; }
+.animate-delay-4 { animation-delay: 0.4s; }
+.animate-delay-5 { animation-delay: 0.5s; }
+
+// Durações customizadas
+.animate-fast { animation-duration: 0.5s; }
+.animate-slow { animation-duration: 1.5s; }
+.animate-slower { animation-duration: 2s; }
+
+// Efeito de digitação
+.typing-effect {
+  overflow: hidden;
+  border-right: 2px solid $primary;
+  white-space: nowrap;
+  animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
+}
+
+// Hover effects para cards
+.card-hover-lift {
+  transition: $transition;
+  
+  &:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: $shadow-hover;
+  }
+}
+
+.card-hover-glow {
+  transition: $transition;
+  
+  &:hover {
+    box-shadow: 0 0 20px rgba(105, 89, 248, 0.3);
+    border-color: $primary;
+  }
+}
+
+// Animação de loading
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(105, 89, 248, 0.1);
+  border-left: 4px solid $primary;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+// Animação de progresso
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background: rgba(105, 89, 248, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  
+  &::after {
+    content: '';
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, $primary, $secondary);
+    animation: progress 2s ease-in-out;
+  }
+}
+
+@keyframes progress {
+  0% { width: 0%; }
+  100% { width: 100%; }
 }
 
 // Utilitários

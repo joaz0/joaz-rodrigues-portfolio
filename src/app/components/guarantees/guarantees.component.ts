@@ -74,10 +74,10 @@ export class GuaranteesComponent {
   ];
 
   stats = [
-    { number: '50+', label: 'Projetos Entregues', icon: 'fas fa-project-diagram' },
+    { number: '10+', label: 'Projetos Entregues', icon: 'fas fa-project-diagram' },
     { number: '98%', label: 'Taxa de Satisfação', icon: 'fas fa-heart' },
     { number: '24h', label: 'Tempo de Resposta', icon: 'fas fa-clock' },
-    { number: '5+', label: 'Anos de Experiência', icon: 'fas fa-calendar-alt' }
+    { number: '2+', label: 'Anos de Experiência', icon: 'fas fa-calendar-alt' }
   ];
 
   openWhatsApp(): void {

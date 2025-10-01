@@ -1,10 +1,10 @@
 <section id="services">
   <div class="container">
-    <h2 class="section-title" scrollAnimate="fadeInUp">Nossos Serviços</h2>
-    <p class="section-subtitle" scrollAnimate="fadeInUp">Soluções completas de desenvolvimento para impulsionar seu negócio</p>
+    <h2 class="section-title animate-fade-in-up">Nossos Serviços</h2>
+    <p class="section-subtitle animate-fade-in-up animate-delay-1">Soluções completas de desenvolvimento para impulsionar seu negócio</p>
     
     <div class="services-grid">
-      <article class="service-card card" scrollAnimate="fadeInUp">
+      <article class="service-card card card-hover-lift animate-fade-in-up animate-delay-1">
         <div class="service-header">
           <div class="service-icon">
             <i class="fas fa-laptop-code" aria-hidden="true"></i>
@@ -33,7 +33,7 @@
         </button>
       </article>
       
-      <article class="service-card card" scrollAnimate="fadeInUp">
+      <article class="service-card card card-hover-lift animate-fade-in-up animate-delay-2">
         <div class="service-header">
           <div class="service-icon">
             <i class="fas fa-server" aria-hidden="true"></i>
@@ -61,7 +61,7 @@
         </button>
       </article>
       
-      <article class="service-card card" scrollAnimate="fadeInUp">
+      <article class="service-card card card-hover-lift animate-fade-in-up animate-delay-3">
         <div class="service-header">
           <div class="service-icon">
             <i class="fas fa-mobile-alt" aria-hidden="true"></i>
@@ -89,38 +89,11 @@
         </button>
       </article>
       
-      <article class="service-card card" scrollAnimate="fadeInUp">
-        <div class="service-header">
-          <div class="service-icon">
-            <i class="fas fa-cloud" aria-hidden="true"></i>
-          </div>
-        </div>
-        <h3>DevOps & Cloud</h3>
-        <p class="service-description">
-          Infraestrutura como código, CI/CD pipelines, containerização Docker/Kubernetes, 
-          monitoramento 24/7 e auto-scaling em AWS/Azure/GCP.
-        </p>
-        <ul class="service-features">
-          <li><i class="fas fa-check"></i> AWS/Azure/GCP</li>
-          <li><i class="fas fa-check"></i> Docker/Kubernetes</li>
-          <li><i class="fas fa-check"></i> CI/CD Pipelines</li>
-          <li><i class="fas fa-check"></i> Infrastructure as Code</li>
-          <li><i class="fas fa-check"></i> 24/7 Monitoring & Alerts</li>
-        </ul>
-        <div class="service-price">
-          <span class="price-from">A partir de</span>
-          <span class="price-value">R$ 2.500</span>
-          <span class="price-period">/mês</span>
-        </div>
-        <button class="btn btn-secondary service-btn" (click)="requestQuote('devops')">
-          <i class="fas fa-arrow-right"></i>
-          Solicitar Orçamento
-        </button>
-      </article>
+
     </div>
     
     <!-- ROI Calculator Section -->
-    <div class="roi-calculator" scrollAnimate="fadeInUp">
+    <div class="roi-calculator animate-fade-in-up animate-delay-4">
       <div class="roi-content">
         <h3>Calcule o ROI do Seu Projeto</h3>
         <p>Veja quanto seu investimento pode retornar em receita adicional</p>
@@ -153,7 +126,7 @@
       </div>
     </div>
 
-    <div class="services-cta" scrollAnimate="fadeInUp">
+    <div class="services-cta animate-fade-in-up animate-delay-5">
       <div class="cta-content">
         <h3>Pronto para Transformar Seu Negócio?</h3>
         <p>Oferecemos consultorias gratuitas de 30 minutos para entender suas necessidades, 
@@ -194,7 +167,7 @@
         </div>
         
         <div class="cta-buttons">
-          <button class="btn btn-primary cta-btn pulse" (click)="scheduleConsultation()">
+          <button class="btn btn-primary cta-btn" (click)="scheduleConsultation()">
             <i class="fas fa-calendar-alt"></i>
             Agendar Consulta Gratuita
           </button>

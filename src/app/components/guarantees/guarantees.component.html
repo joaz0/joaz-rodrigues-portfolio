@@ -39,25 +39,7 @@
         </div>
       </div>
     </div>
-
-    <!-- Certifications -->
-    <div class="certifications-section" scrollAnimate="fadeInUp">
-      <h3>Certificações e Parcerias</h3>
-      <div class="certifications-grid">
-        <div class="certification-item" 
-             *ngFor="let cert of certifications; let i = index"
-             [style.animation-delay]="(i * 0.1) + 's'">
-          <div class="cert-icon">
-            <i [class]="cert.icon"></i>
-          </div>
-          <div class="cert-content">
-            <h4>{{ cert.name }}</h4>
-            <p>{{ cert.description }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    
     <!-- CTA Section -->
     <div class="guarantees-cta" scrollAnimate="fadeInUp">
       <div class="cta-content">
