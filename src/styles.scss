@@ -56,7 +56,7 @@ $card-light: var(--card-light);
 $card-dark: var(--card-dark);
 $shadow: var(--shadow);
 $shadow-hover: var(--shadow-hover);
-$transition: var(--transition);
+$transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
 <<<<<<< HEAD
 
