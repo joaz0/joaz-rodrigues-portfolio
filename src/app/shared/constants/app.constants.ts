@@ -2,7 +2,9 @@ export const APP_CONFIG = {
   name: 'Joaz Rodrigues Portfolio',
   version: '1.0.0',
   author: 'Joaz Rodrigues',
-  description: 'Desenvolvedor Full-Stack especializado em soluções web, mobile e desktop'
+  description: 'Desenvolvedor Full-Stack especializado em soluções web, mobile e desktop',
+  COMPANY_NAME: 'Joaz Rodrigues',
+  TAGLINE: 'Desenvolvedor Full-Stack'
 };
 
 export const CONTACT_INFO = {
@@ -18,3 +20,11 @@ export const SOCIAL_LINKS = {
   linkedin: CONTACT_INFO.linkedin,
   github: CONTACT_INFO.github
 };
+
+export const NAVIGATION_ITEMS = [
+  { label: 'Home', href: '#home' },
+  { label: 'Sobre', href: '#about' },
+  { label: 'Serviços', href: '#services' },
+  { label: 'Projetos', href: '#projects' },
+  { label: 'Contato', href: '#contact' }
+];

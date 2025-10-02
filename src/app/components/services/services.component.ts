@@ -1,23 +1,20 @@
-import { Component, ChangeDetectionStrategy, ViewChild } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { SERVICES } from '../../shared/constants/data.constants';
 import type { Service } from '../../shared/interfaces';
 import { ScrollAnimateDirective } from '../../directives/scroll-animate.directive';
-import { QuoteCalculatorComponent } from '../quote-calculator/quote-calculator.component';
 
 @Component({
   selector: 'app-services',
   standalone: true,
-  imports: [CommonModule, FormsModule, ScrollAnimateDirective, QuoteCalculatorComponent],
+  imports: [CommonModule, FormsModule, ScrollAnimateDirective],
   templateUrl: './services.component.html',
   styleUrls: ['./services.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ServicesComponent {
   protected readonly services: readonly Service[] = SERVICES;
-  
-  @ViewChild(QuoteCalculatorComponent) quoteCalculator!: QuoteCalculatorComponent;
   
   // ROI Calculator properties
   currentRevenue = 0;
@@ -96,7 +93,7 @@ ${service.deliverables.map(item => `• ${item}`).join('\n')}
   }
   
   openQuoteCalculator(): void {
-    this.quoteCalculator.openCalculator();
+    console.log('Abrir calculador de orçamento');
   }
   
   calculateROI(): number {

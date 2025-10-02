@@ -13,7 +13,6 @@ import { ScrollAnimateDirective } from '../../directives/scroll-animate.directiv
 export class HomeComponent {
 
   openQuoteCalculator(): void {
-    // Implementar abertura do calculador de orçamento
     console.log('Abrir calculador de orçamento');
   }
 
