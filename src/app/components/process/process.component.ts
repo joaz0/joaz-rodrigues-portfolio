@@ -17,28 +17,28 @@ export class ProcessComponent {
 
   private readonly stepDetails = {
     1: {
-      title: 'Discovery & Business Analysis',
-      details: 'Workshop completo com stakeholders para entender objetivos de negócio, mapear requisitos funcionais e não-funcionais, definir personas e jornadas do usuário.',
-      tools: ['Miro', 'Figma', 'Google Analytics', 'Hotjar'],
-      deliverables: ['Business Requirements Document', 'User Personas', 'Journey Maps', 'Technical Feasibility Report']
+      title: 'Entendendo Sua Ideia',
+      details: 'Conversamos para entender suas necessidades, objetivos e como podemos ajudar seu negócio crescer.',
+      tools: ['Reunião Online', 'WhatsApp', 'E-mail'],
+      deliverables: ['Briefing Detalhado', 'Orçamento Personalizado', 'Cronograma', 'Proposta Comercial']
     },
     2: {
-      title: 'Architecture & Sprint Planning',
-      details: 'Definição da arquitetura de software, escolha do stack tecnológico, modelagem do banco de dados, design de APIs.',
-      tools: ['Draw.io', 'Postman', 'Docker', 'AWS/Azure'],
-      deliverables: ['System Architecture Diagram', 'Database Schema', 'API Documentation', 'Development Environment']
+      title: 'Planejamento e Design',
+      details: 'Criamos o design e estrutura do seu projeto, sempre com sua aprovação em cada etapa.',
+      tools: ['Figma', 'Photoshop', 'Canva'],
+      deliverables: ['Layout Visual', 'Protótipo Interativo', 'Estrutura do Sistema', 'Aprovação Final']
     },
     3: {
-      title: 'Agile Development & QA',
-      details: 'Desenvolvimento em sprints com metodologia Scrum, code review obrigatório, testes automatizados e integração contínua.',
-      tools: ['Git', 'Jest/Cypress', 'SonarQube', 'Jenkins/GitHub Actions'],
-      deliverables: ['Working Software', 'Test Reports', 'Code Quality Metrics', 'Sprint Reviews']
+      title: 'Desenvolvimento',
+      details: 'Desenvolvemos seu projeto com atualizações regulares e possibilidade de ajustes durante o processo.',
+      tools: ['VS Code', 'Git', 'Angular/React', 'Node.js'],
+      deliverables: ['Código do Sistema', 'Testes de Funcionamento', 'Relatórios de Progresso', 'Versão de Testes']
     },
     4: {
-      title: 'Production & Support',
-      details: 'Deploy em produção com estratégia blue-green, configuração de monitoramento, alertas e backup.',
-      tools: ['Kubernetes', 'Prometheus', 'Grafana', 'New Relic'],
-      deliverables: ['Production Environment', 'Monitoring Dashboard', 'User Documentation', 'Support Procedures']
+      title: 'Entrega e Suporte',
+      details: 'Colocamos seu projeto no ar, ensinamos como usar e oferecemos suporte para dúvidas.',
+      tools: ['Hospedagem', 'Domínio', 'SSL', 'Backup'],
+      deliverables: ['Site/App Online', 'Manual de Uso', 'Treinamento', 'Suporte Pós-Entrega']
     }
   };
 
@@ -52,16 +52,16 @@ export class ProcessComponent {
       const message = `
 🚀 **${step.title}**
 
-📋 **Descrição:**
+📋 **O que fazemos:**
 ${step.details}
 
-🛠️ **Ferramentas:**
+🛠️ **Como trabalhamos:**
 ${step.tools.join(', ')}
 
-📦 **Entregáveis:**
+📦 **O que você recebe:**
 ${step.deliverables.map(item => `• ${item}`).join('\n')}
 
-💬 Quer saber mais sobre esta etapa? Entre em contato conosco!
+💬 Quer saber mais? Vamos conversar!
       `;
       
       const whatsappUrl = `https://wa.me/5535992669710?text=${encodeURIComponent(message)}`;

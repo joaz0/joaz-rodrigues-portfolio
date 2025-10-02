@@ -230,6 +230,7 @@ section {
   background: linear-gradient(135deg, $primary 0%, $secondary 100%);
   color: white;
   box-shadow: $shadow;
+  border-radius: 50px;
 
   &:hover {
     transform: translateY(-3px);
@@ -241,7 +242,9 @@ section {
 .btn-secondary {
   background: transparent;
   color: $primary;
-  border: 2px solid $primary;
+  border: 1px solid $primary;
+  border-radius: 50px;
+  margin: 1px;
   box-shadow: $shadow;
 
   &:hover {

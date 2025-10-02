@@ -13,7 +13,10 @@ import { ScrollAnimateDirective } from '../../directives/scroll-animate.directiv
 export class HomeComponent {
 
   openQuoteCalculator(): void {
-    console.log('Abrir calculador de orçamento');
+    const quoteSection = document.getElementById('quote-calculator');
+    if (quoteSection) {
+      quoteSection.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 
   scheduleConsultation(): void {

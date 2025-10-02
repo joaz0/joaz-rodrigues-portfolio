@@ -56,28 +56,28 @@ export class FaqComponent {
       id: 4,
       category: 'support',
       question: 'Vocês oferecem suporte após a entrega?',
-      answer: 'Sim! Oferecemos 6 meses de suporte técnico gratuito, incluindo correções de bugs, pequenos ajustes e orientações. Também temos planos de manutenção mensal para atualizações contínuas e melhorias.',
+      answer: 'Sim! Oferecemos 2 meses de suporte técnico gratuito, incluindo correções de bugs, pequenos ajustes e orientações. Também temos planos de manutenção mensal para atualizações contínuas e melhorias.',
       isOpen: false
     },
     {
       id: 5,
       category: 'process',
       question: 'Como funciona o processo de desenvolvimento?',
-      answer: 'Seguimos 5 etapas: 1) Descoberta e planejamento, 2) Design e prototipação, 3) Desenvolvimento, 4) Testes e ajustes, 5) Entrega e treinamento. Você participa ativamente de cada fase e recebe atualizações semanais.',
+      answer: 'Seguimos 5 etapas: 1) Entendendo sua ideia, 2) Planejamento e design, 3) Desenvolvimento, 4) Entrega e treinamento. Você participa ativamente de cada fase e recebe atualizações semanais.',
       isOpen: false
     },
     {
       id: 6,
       category: 'pricing',
       question: 'Posso parcelar o pagamento?',
-      answer: 'Sim! Oferecemos parcelamento em até 12x no cartão ou divisão em etapas do projeto (30% início, 40% desenvolvimento, 30% entrega). Também aceitamos PIX com 5% de desconto à vista.',
+      answer: 'Sim! Oferecemos parcelamento em até 5x no cartão ou divisão em etapas do projeto (30% início, 40% desenvolvimento, 30% entrega). Também aceitamos PIX com 5% de desconto à vista.',
       isOpen: false
     },
     {
       id: 7,
       category: 'technical',
       question: 'O site será responsivo e otimizado para SEO?',
-      answer: 'Absolutamente! Todos os nossos projetos são mobile-first, 100% responsivos e otimizados para SEO. Incluímos estrutura semântica, meta tags, sitemap, schema markup e otimização de performance (Core Web Vitals).',
+      answer: 'Com certeza! Seu site vai funcionar perfeitamente em qualquer dispositivo (celular, tablet ou computador). E mais: vamos configurá-lo para que apareça bem posicionado no Google, facilitando que novos clientes encontrem seu negócio na internet.',
       isOpen: false
     },
     {
@@ -91,7 +91,7 @@ export class FaqComponent {
       id: 9,
       category: 'process',
       question: 'Preciso fornecer conteúdo e imagens?',
-      answer: 'Podemos trabalhar das duas formas: você fornece o conteúdo ou criamos para você. Temos parceria com redatores e fotógrafos profissionais. Também oferecemos banco de imagens premium incluído no projeto.',
+      answer: 'Trabalhamos em parceria com você! Se já tiver textos e fotos do seu negócio, ótimo. Se não tiver, ajudamos a criar o conteúdo e disponibilizamos acesso a bancos de imagens profissionais para deixar seu site impecável.',
       isOpen: false
     },
     {

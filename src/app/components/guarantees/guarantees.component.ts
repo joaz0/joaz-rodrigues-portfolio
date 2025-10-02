@@ -9,12 +9,6 @@ interface Guarantee {
   highlight: string;
 }
 
-interface Certification {
-  name: string;
-  icon: string;
-  description: string;
-}
-
 @Component({
   selector: 'app-guarantees',
   standalone: true,
@@ -38,38 +32,15 @@ export class GuaranteesComponent {
     },
     {
       icon: 'fas fa-headset',
-      title: 'Suporte 6 Meses',
-      description: 'Suporte técnico gratuito por 6 meses após a entrega do projeto',
-      highlight: '6 Meses Grátis'
+      title: 'Suporte 2 Meses',
+      description: 'Suporte técnico gratuito por 2 meses após a entrega do projeto',
+      highlight: '2 Meses Grátis'
     },
     {
       icon: 'fas fa-lock',
       title: 'Código Seguro',
       description: 'Seguimos as melhores práticas de segurança e compliance LGPD',
       highlight: 'LGPD Compliant'
-    }
-  ];
-
-  certifications: Certification[] = [
-    {
-      name: 'AWS Certified',
-      icon: 'fab fa-aws',
-      description: 'Certificação em Amazon Web Services'
-    },
-    {
-      name: 'Google Cloud',
-      icon: 'fab fa-google',
-      description: 'Parceiro certificado Google Cloud'
-    },
-    {
-      name: 'Microsoft Azure',
-      icon: 'fab fa-microsoft',
-      description: 'Certificação Microsoft Azure'
-    },
-    {
-      name: 'ISO 27001',
-      icon: 'fas fa-certificate',
-      description: 'Padrão internacional de segurança'
     }
   ];
 

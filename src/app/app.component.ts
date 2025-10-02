@@ -7,6 +7,9 @@ import { AboutComponent } from './components/about/about.component';
 import { ServicesComponent } from './components/services/services.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ProcessComponent } from './components/process/process.component';
+import { GuaranteesComponent } from './components/guarantees/guarantees.component';
+import { FaqComponent } from './components/faq/faq.component';
+import { QuoteCalculatorComponent } from './components/quote-calculator/quote-calculator.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ThemeService } from './services/theme.service';
@@ -22,6 +25,9 @@ import { ThemeService } from './services/theme.service';
     ServicesComponent,
     ProjectsComponent,
     ProcessComponent,
+    GuaranteesComponent,
+    FaqComponent,
+    QuoteCalculatorComponent,
     ContactComponent,
     FooterComponent
   ],
@@ -34,8 +40,11 @@ import { ThemeService } from './services/theme.service';
       <app-services></app-services>
       <app-projects></app-projects>
       <app-process></app-process>
+      <app-guarantees></app-guarantees>
+      <app-faq></app-faq>
       <app-contact></app-contact>
     </main>
+    <app-quote-calculator></app-quote-calculator>
     <app-footer></app-footer>
   
     <!-- WhatsApp Float Button -->
