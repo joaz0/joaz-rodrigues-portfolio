@@ -22,9 +22,9 @@ export const SOCIAL_LINKS = {
 };
 
 export const NAVIGATION_ITEMS = [
-  { label: 'Home', href: '#home' },
-  { label: 'Sobre', href: '#about' },
-  { label: 'Serviços', href: '#services' },
-  { label: 'Projetos', href: '#projects' },
-  { label: 'Contato', href: '#contact' }
+  { label: 'Home', href: '#home', id: 'home' },
+  { label: 'Sobre', href: '#about', id: 'about' },
+  { label: 'Serviços', href: '#services', id: 'services' },
+  { label: 'Projetos', href: '#projects', id: 'projects' },
+  { label: 'Contato', href: '#contact', id: 'contact' }
 ];
