@@ -1,15 +1,14 @@
 @import 'src/styles';
 
 .contact-content {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: clamp(32px, 6vw, 60px);
   margin-top: clamp(40px, 6vh, 60px);
-  
-  @media (min-width: 992px) {
-    grid-template-columns: 1fr 1.2fr;
-    gap: clamp(40px, 6vw, 80px);
-  }
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contact-hero {
@@ -52,6 +51,8 @@
   display: flex;
   flex-direction: column;
   gap: clamp(24px, 4vw, 32px);
+  width: 100%;
+  max-width: 600px;
 
   .contact-header {
     text-align: center;
@@ -192,6 +193,8 @@
 
 .contact-form {
   position: relative;
+  width: 100%;
+  max-width: 600px;
   
   .form-header {
     text-align: center;
@@ -325,11 +328,9 @@
     }
 
     .submit-btn {
-      align-self: flex-start;
-      
-      @media (max-width: 576px) {
-        width: 100%;
-      }
+      align-self: center;
+      width: 100%;
+      max-width: 300px;
       
       &:disabled {
         opacity: 0.6;

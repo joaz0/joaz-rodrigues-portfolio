@@ -40,7 +40,7 @@ export class ContactComponent {
       await this.sendAutomatically(formData);
       
       // Redirecionar para página de agradecimento
-      this.router.navigate(['/obrigado'], {
+      this.router.navigate(['/sucesso'], {
         queryParams: {
           name: formData.name,
           type: 'quote'

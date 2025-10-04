@@ -14,7 +14,7 @@ export const routes: Routes = [
     loadComponent: () => import('./components/quote-form/quote-form.component').then(m => m.QuoteFormComponent)
   },
   { 
-    path: 'obrigado', 
+    path: 'sucesso', 
     loadComponent: () => import('./components/thank-you/thank-you.component').then(m => m.ThankYouComponent)
   },
   { path: '**', redirectTo: '/' }
