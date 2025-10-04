@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { RouterOutlet, RouterModule } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { TechnologiesComponent } from './components/technologies/technologies.component';
@@ -18,6 +19,8 @@ import { ThemeService } from './services/theme.service';
   selector: 'app-root',
   standalone: true,
   imports: [
+    RouterOutlet,
+    RouterModule,
     HeaderComponent,
     HomeComponent,
     TechnologiesComponent,
@@ -32,21 +35,16 @@ import { ThemeService } from './services/theme.service';
     FooterComponent
   ],
   template: `
-    <app-header></app-header>
-    <main>
-      <app-home></app-home>
-      <app-technologies></app-technologies>
-      <app-about></app-about>
-      <app-services></app-services>
-      <app-projects></app-projects>
-      <app-process></app-process>
-      <app-guarantees></app-guarantees>
-      <app-faq></app-faq>
-      <app-contact></app-contact>
-    </main>
-    <app-quote-calculator></app-quote-calculator>
-    <app-footer></app-footer>
-  
+    <router-outlet></router-outlet>
+    
+    <!-- Floating Quote Button -->
+    <div class="floating-quote">
+      <button (click)="scrollToContact()" class="quote-btn" aria-label="Solicitar Cotação">
+        <i class="fas fa-calculator"></i>
+        <span>Cotação</span>
+      </button>
+    </div>
+    
     <!-- WhatsApp Float Button -->
     <div class="whatsapp-float">
       <a href="https://wa.me/5535992669710?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." 
@@ -70,6 +68,13 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
       this.themeService.loadThemePreference();
+    }
+  }
+
+  scrollToContact(): void {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
     }
   }
 }

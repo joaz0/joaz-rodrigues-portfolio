@@ -1,0 +1,128 @@
+<section id="cotacao" class="quote-form-section">
+  <div class="container">
+    <div class="quote-form-header" scrollAnimate="fadeInUp">
+      <h1>Solicite sua Cotação</h1>
+      <p>Conte-nos sobre seu projeto e receba um orçamento personalizado</p>
+    </div>
+
+    <div class="quote-form-container" scrollAnimate="fadeInUp">
+      <form [formGroup]="quoteForm" (ngSubmit)="onSubmit()" class="quote-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Nome Completo *</label>
+            <input 
+              type="text" 
+              id="name" 
+              formControlName="name"
+              placeholder="Seu nome completo"
+              [class.error]="isFieldInvalid('name')"
+            >
+            <span class="error-message" *ngIf="isFieldInvalid('name')">
+              Nome é obrigatório
+            </span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail *</label>
+            <input 
+              type="email" 
+              id="email" 
+              formControlName="email"
+              placeholder="seu@email.com"
+              [class.error]="isFieldInvalid('email')"
+            >
+            <span class="error-message" *ngIf="isFieldInvalid('email')">
+              E-mail válido é obrigatório
+            </span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone">WhatsApp *</label>
+            <input 
+              type="tel" 
+              id="phone" 
+              formControlName="phone"
+              placeholder="(35) 99999-9999"
+              [class.error]="isFieldInvalid('phone')"
+            >
+            <span class="error-message" *ngIf="isFieldInvalid('phone')">
+              WhatsApp é obrigatório
+            </span>
+          </div>
+
+          <div class="form-group">
+            <label for="projectType">Tipo de Projeto *</label>
+            <select 
+              id="projectType" 
+              formControlName="projectType"
+              [class.error]="isFieldInvalid('projectType')"
+            >
+              <option value="">Selecione o tipo</option>
+              <option value="website">Site Institucional</option>
+              <option value="ecommerce">Loja Virtual</option>
+              <option value="app">Aplicativo Mobile</option>
+              <option value="system">Sistema Web</option>
+              <option value="other">Outro</option>
+            </select>
+            <span class="error-message" *ngIf="isFieldInvalid('projectType')">
+              Selecione o tipo de projeto
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="budget">Orçamento Estimado</label>
+          <select id="budget" formControlName="budget">
+            <option value="">Selecione uma faixa</option>
+            <option value="1000-3000">R$ 1.000 - R$ 3.000</option>
+            <option value="3000-5000">R$ 3.000 - R$ 5.000</option>
+            <option value="5000-10000">R$ 5.000 - R$ 10.000</option>
+            <option value="10000+">Acima de R$ 10.000</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Descrição do Projeto *</label>
+          <textarea 
+            id="description" 
+            formControlName="description"
+            placeholder="Descreva seu projeto, funcionalidades desejadas, prazo..."
+            rows="5"
+            [class.error]="isFieldInvalid('description')"
+          ></textarea>
+          <span class="error-message" *ngIf="isFieldInvalid('description')">
+            Descrição do projeto é obrigatória
+          </span>
+        </div>
+
+        <div class="form-actions">
+          <button 
+            type="submit" 
+            class="btn btn-primary"
+            [disabled]="quoteForm.invalid || isSubmitting"
+          >
+            <i class="fas fa-paper-plane" *ngIf="!isSubmitting"></i>
+            <i class="fas fa-spinner fa-spin" *ngIf="isSubmitting"></i>
+            {{ isSubmitting ? 'Enviando...' : 'Solicitar Cotação' }}
+          </button>
+        </div>
+      </form>
+
+      <div class="contact-info">
+        <h3>Ou entre em contato diretamente:</h3>
+        <div class="contact-methods">
+          <a href="https://wa.me/5535992669710" class="contact-method" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            <span>(35) 99266-9710</span>
+          </a>
+          <a href="mailto:contato&#64;digitallabs.com.br" class="contact-method">
+            <i class="fas fa-envelope"></i>
+            <span>contato&#64;digitallabs.com.br</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

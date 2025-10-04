@@ -15,7 +15,7 @@
   backdrop-filter: blur(20px);
   box-shadow: var(--shadow);
   padding: 0 clamp(24px, 5vw, 60px);
-  height: clamp(90px, 14vh, 110px);
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,7 +30,7 @@
 }
 
 .logo-img {
-  height: clamp(55px, 10vh, 75px);
+  height: 70px;
   width: auto;
   transition: var(--transition);
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
@@ -205,10 +205,5 @@
 
 // Scroll effect
 .header.scrolled .navbar {
-  height: clamp(75px, 12vh, 95px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  
-  .logo-img {
-    height: clamp(45px, 8vh, 60px);
-  }
 }

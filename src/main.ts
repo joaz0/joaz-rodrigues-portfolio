@@ -4,6 +4,9 @@ import { importProvidersFrom } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app/app.component';
 import { routes } from './app/app.routes';
+import { inject } from '@vercel/analytics';
+
+inject();
 
 bootstrapApplication(AppComponent, {
   providers: [

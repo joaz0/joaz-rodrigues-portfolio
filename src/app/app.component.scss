@@ -2,6 +2,44 @@ main {
   min-height: calc(100vh - 160px);
 }
 
+.floating-quote {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  z-index: 1000;
+  
+  .quote-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    background: linear-gradient(135deg, #6959f8, #b8a8ff);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(105, 89, 248, 0.4);
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 0.9rem;
+    
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(105, 89, 248, 0.6);
+    }
+    
+    i {
+      font-size: 1.2rem;
+    }
+    
+    span {
+      @media (max-width: 480px) {
+        display: none;
+      }
+    }
+  }
+}
+
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
